@@ -2,8 +2,9 @@ services:
   - type: web
     name: smart-waste-inspector
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py --server.port=$PORT
     runtime: python
-    region: oregon  # or keep default
-    plan: free
+    buildCommand: |
+      pyenv install 3.10.13
+      pyenv global 3.10.13
+      pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=$PORT
