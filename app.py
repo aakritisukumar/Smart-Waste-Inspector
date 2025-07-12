@@ -5,9 +5,7 @@ import numpy as np
 from PIL import Image
 import os
 
-model = load_model("model/garbage_classifier_model.keras", compile=False, custom_objects={
-    "LeakyReLU": LeakyReLU
-})
+model = load_model("model/garbage_classifier_model.keras", compile=False)
 
 bin_images = {
     "Recyclable ♻️": "assets/recycle-bin.png",
