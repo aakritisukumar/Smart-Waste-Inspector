@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 import os
 
-model = load_model("model/garbage_classifier_model.h5")
+model = load_model("model/garbage_classifier_model_legacy.h5", compile=False)
 
 bin_images = {
     "Recyclable ♻️": "assets/recycle-bin.png",
